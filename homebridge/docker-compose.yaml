@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  homebridge:
+    image: oznu/homebridge:latest
+    restart: unless-stopped
+    network_mode: host
+
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - HOMEBRIDGE_CONFIG_UI=1
+      - HOMEBRIDGE_CONFIG_UI_PORT=8581
+      - TZ=Berlin/Germany
+
+    volumes:
+      - ./homebridge:/homebridge

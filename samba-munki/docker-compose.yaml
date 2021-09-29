@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  samba-munki:
+    image: trnape/rpi-samba
+    restart: unless-stopped
+    ports:
+      - 445:445
+ 
+    command: [
+      "-u", "${SMBUSER}:${SMBPASS}",
+      "-s", "munki_repo:/mount/share/munki_repo:rw:${SMBUSER}",
+      "-s", "MoneyMoney:/mount/share/moneymoney:rw:${SMBUSER}" ]
+ 
+    volumes:
+      - ./munki_repo:/mount/share/munki_repo
+      - ./moneymoney:/mount/share/moneymoney
