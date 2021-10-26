@@ -12,7 +12,7 @@ services:
       ofelia.job-run.fetchpy.schedule: "@every 2m"
       ofelia.job-run.fetchpy.container: "wget"
 #      ofelia.job-run.fetchpy.command: "wget http://casa-blu.de/cgi-bin/fetch.py -O /opt/logs/fetch.out -o /opt/logs/fetch.log"
-      ofelia.job-run.fetchpy.command: "wget http://casa-blu.de/cgi-bin/fetch.py"
+#      ofelia.job-run.fetchpy.command: "wget http://casa-blu.de/cgi-bin/fetch.py"
       
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
