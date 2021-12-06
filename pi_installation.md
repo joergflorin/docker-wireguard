@@ -40,5 +40,71 @@ sudo mount /mnt/my-external-mount
 ```
 
 ## Install git
+```
+sudo apt-get install git
+```
+## Install and configure docker
+see https://docs.docker.com/engine/install/debian/
 
-```sudo apt-get install git
+### Install docker
+https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script
+
+### Add user pi to group docker
+```
+sudo usermod -aG docker ${USER}
+```
+### Running docker at system boot
+```
+sudo systemctl enable docker
+```
+
+### Install docker-compose
+see https://pumpingco.de/blog/setup-your-raspberry-pi-for-docker-and-docker-compose/
+
+```
+sudo apt-get install libffi-dev libssl-dev
+sudo apt install python3-dev
+sudo apt-get install -y python3 python3-pup
+sudo pip3 install docker-compose
+```
+
+## Configure and install containers
+### Portainer CE
+https://docs.portainer.io/v/ce-2.9/
+https://docs.portainer.io/v/ce-2.9/start/install/server/docker/linux
+
+http address of portainer: http://mypi:9000
+
+### clone repository with docker compose configurations to /home/pi
+
+```
+cd
+git clone https://github.com/joergflorin/docker
+```
+
+### SMB file server
+via docker-yaml, see https://github.com/joergflorin/docker/tree/master/samba-munki
+
+### nginx http server
+via docker-yaml, see https://github.com/joergflorin/docker/tree/master/http-munki
+
+### homebridge
+via docker-yaml, see https://github.com/joergflorin/docker/tree/master/homebridge
+
+### cron trigger for external websites
+via docker-yaml, see https://github.com/joergflorin/docker/tree/master/scheduler
+
+## ddclient (for external ipv6 access)
+```
+sudo apt-get install ddclient
+```
+
+Configuration:
+```
+usev6=if, if=eth0
+protocol=dyndns2
+server=dyndns.strato.com
+login=mystratoid
+password='myddnspassword'
+myexternaldomain.de
+```
