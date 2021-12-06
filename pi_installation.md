@@ -14,35 +14,28 @@ see https://www.raspberrypi.org/documentation/computers/getting-started.html
 ## Mount external drive (fuse, ntfs) for full backups only (optional)
 
 ### Install ntfs-3g driver
-```
-sudo apt-get install ntfs-3g
-```
+
+`sudo apt-get install ntfs-3g`
 
 ### Configure mount point
 
 1. Get UUID via command `blkid` -> my-complete-uuid
 2. Create mount point
 
-```
-sudo mkdir /mnt/my-external-mount
-```
+`sudo mkdir /mnt/my-external-mount`
 
 3. Add to `/etc/fstab`
 
-```
-PARTUUID=my-complete-uuid /mnt/my-external-mount     ntfs    defaults,noauto,nls=utf-8        0       0
-```
+`PARTUUID=my-complete-uuid /mnt/my-external-mount     ntfs    defaults,noauto,nls=utf-8        0       0`
 
 The drive can be mounted by following command
 
-```
-sudo mount /mnt/my-external-mount
-```
+`sudo mount /mnt/my-external-mount`
 
 ## Install git
-```
-sudo apt-get install git
-```
+
+`sudo apt-get install git`
+
 ## Install and configure docker
 see https://docs.docker.com/engine/install/debian/
 
@@ -50,13 +43,11 @@ see https://docs.docker.com/engine/install/debian/
 https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script
 
 ### Add user pi to group docker
-```
-sudo usermod -aG docker ${USER}
-```
+
+`sudo usermod -aG docker ${USER}`
 ### Running docker at system boot
-```
-sudo systemctl enable docker
-```
+
+`sudo systemctl enable docker`
 
 ### Install docker-compose
 see https://pumpingco.de/blog/setup-your-raspberry-pi-for-docker-and-docker-compose/
@@ -95,9 +86,7 @@ via docker-yaml, see https://github.com/joergflorin/docker/tree/master/homebridg
 via docker-yaml, see https://github.com/joergflorin/docker/tree/master/scheduler
 
 ## ddclient (for external ipv6 access)
-```
-sudo apt-get install ddclient
-```
+`sudo apt-get install ddclient`
 
 Configuration:
 ```
@@ -108,3 +97,5 @@ login=mystratoid
 password='myddnspassword'
 myexternaldomain.de
 ```
+
+Configure ipv6 of mypi for access through the router.
