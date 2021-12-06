@@ -41,4 +41,4 @@ sudo mount /mnt/my-external-mount
 
 ## Install git
 
-'''sudo apt-get install git
+```sudo apt-get install git
