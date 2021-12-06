@@ -1,6 +1,6 @@
-# homebridge
+# samba-munki
 
-Docker service definitions for homebridge server.
+Docker service definitions for Samba server.
 
 Create subdirectories `moneymoney` (only private access) and `munki_repo` (public read access) as samba shares.
 
