@@ -6,3 +6,5 @@ The nginx server will share the directory `./samba-munki/munki_repo` from the sa
 the munki repository with installers and manifests for deploying mac software. Run following command in this directory: 
 
 `docker-compose up -d`
+
+see https://hub.docker.com/_/nginx
