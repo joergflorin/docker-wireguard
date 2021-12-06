@@ -37,3 +37,8 @@ The drive can be mounted by following command
 
 ```
 sudo mount /mnt/my-external-mount
+```
+
+## Install git
+
+'''sudo apt-get install git
