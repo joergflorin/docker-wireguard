@@ -12,3 +12,5 @@ Set environment variables for setting the users for the directories:
 Finally run following command in this directory: 
 
 `docker-compose up -d`
+
+see https://hub.docker.com/r/trnape/rpi-samba/
