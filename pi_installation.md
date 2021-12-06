@@ -8,8 +8,8 @@ see https://www.raspberrypi.org/documentation/computers/getting-started.html
 2. Start Imager
 3. Select newest Pi OS Lite (32-Bit)
 4. Ctrl-Shift-X for advanced options
-  - set hostname (e.g. mypi)
-  - configure ssh access
+   - set hostname (e.g. mypi)
+   - configure ssh access
 
 ## Mount external drive (fuse, ntfs) for full backups only (optional)
 
