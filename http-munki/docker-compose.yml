@@ -9,4 +9,4 @@ services:
       - 80:80
 
     volumes:
-      - ../samba-munki/munki_repo:/usr/share/nginx/html:ro
+      - ../samba-munki/munki_repo:/usr/share/nginx/html/munki_repo:ro
