@@ -51,6 +51,11 @@ see https://docs.docker.com/engine/install/debian/
 ### Install docker
 https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script
 
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+
 ### Add user pi to group docker
 
 `sudo usermod -aG docker ${USER}`
