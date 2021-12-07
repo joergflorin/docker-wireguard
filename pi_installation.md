@@ -10,6 +10,14 @@ see https://www.raspberrypi.org/documentation/computers/getting-started.html
 4. Ctrl-Shift-X for advanced options
    - set hostname (e.g. mypi)
    - configure ssh access
+5. Boot pi with prepared SD card and connect via ssh
+6. update os:
+
+```
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get autoclean
+```
 
 ## Mount external drive (fuse, ntfs) for full backups only (optional)
 
