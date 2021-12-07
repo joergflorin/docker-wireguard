@@ -78,7 +78,9 @@ sudo pip3 install docker-compose
 https://docs.portainer.io/v/ce-2.9/
 https://docs.portainer.io/v/ce-2.9/start/install/server/docker/linux
 
-http address of portainer: http://mypi:9000
+http address of portainer: https://mypi:9443
+
+Upgrading: https://docs.portainer.io/v/ce-2.9/start/upgrade/docker
 
 ### clone repository with docker compose configurations to /home/pi
 
