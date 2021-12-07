@@ -6,11 +6,15 @@ Create subdirectories `moneymoney` (only private access) and `munki_repo` (publi
 
 Set environment variables for setting the users for the directories:
 
-`export SMBUSER=MyUser`
-`export SMBPASS=MyPassword`
+```
+export SMBUSER=MyUser
+export SMBPASS=MyPassword
+```
 
 Finally run following command in this directory: 
 
-`docker-compose up -d`
+```
+docker-compose up -d
+```
 
 see https://hub.docker.com/r/trnape/rpi-samba/
