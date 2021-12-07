@@ -18,6 +18,7 @@ sudo apt-get update
 sudo apt-get dist-upgrade
 sudo apt-get autoclean
 ```
+7. Install `~/.ssh/authorized_keys` for easy ssh access.
 
 ## Mount external drive (fuse, ntfs) for full backups only (optional)
 
