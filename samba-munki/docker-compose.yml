@@ -9,9 +9,10 @@ services:
       - 445:445
  
     command: [
-      "-u", "${SMBUSER}:${SMBPASS}",
-      "-s", "munki_repo:/mount/share/munki_repo:rw:${SMBUSER}",
-      "-s", "MoneyMoney:/mount/share/moneymoney:rw:${SMBUSER}" ]
+      "-u", "${SMBUSER_ADMIN}:${SMBPASS_ADMIN}",
+      "-u", "${SMBUSER_MM}:${SMBPASS_MM}",
+      "-s", "munki_repo:/mount/share/munki_repo:rw:${SMBUSER_ADMIN}",
+      "-s", "MoneyMoney:/mount/share/moneymoney:rw:${SMBUSER_MM},${SMBUSER_ADMIN}" ]
  
     volumes:
       - ./munki_repo:/mount/share/munki_repo
