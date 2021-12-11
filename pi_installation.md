@@ -133,4 +133,8 @@ password='myddnspassword'
 myexternaldomain.de
 ```
 
-Configure ipv6 of mypi for access through the router.
+Configure ipv6 of mypi for access through the router:
+
+```
+ip addr show dev eth0 | sed -e's/^.*inet6 \([^ ]*\)\/.*$/\1/;t;d'
+```
