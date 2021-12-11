@@ -138,3 +138,5 @@ Configure ipv6 of mypi for access through the router:
 ```
 ip addr show dev eth0 | sed -e's/^.*inet6 \([^ ]*\)\/.*$/\1/;t;d'
 ```
+
+The shown full address has the prefix of the router und the last four words should be configured in the sharing setting of the router.
