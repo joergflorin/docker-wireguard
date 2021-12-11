@@ -4,9 +4,11 @@ Docker container definition for wget
 
 Use this container as a sub-container for e.g. scheduler. It uses following environment variables:
 
-`url=https://google.com`
-`contentOut=wget.txt`
-`requestLog=wget.log`
+```
+url=https://google.com
+contentOut=wget.txt
+requestLog=wget.log
+```
 
 The logs-Volume will be used to store the log files.
 
