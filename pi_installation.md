@@ -123,7 +123,7 @@ via docker-yaml, see https://github.com/joergflorin/docker/tree/master/scheduler
 sudo apt-get install ddclient
 ```
 
-Configuration:
+Configuration (`/etc/ddclient.conf`):
 ```
 usev6=if, if=eth0
 protocol=dyndns2
