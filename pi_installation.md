@@ -139,4 +139,11 @@ Configure ipv6 of mypi for access through the router:
 ip addr show dev eth0 | sed -e's/^.*inet6 \([^ ]*\)\/.*$/\1/;t;d'
 ```
 
-The shown full address has the prefix of the router und the last four words should be configured in the sharing setting of the router.
+The shown full address has the prefix of the router und the last four words should be configured in the sharing setting of the router. E.g output is:
+
+```
+1111:2222:3333:4444:5555:6666:7777:8888
+9999::aaaa:bbbb:cccc:dddd
+```
+
+`1111:2222:3333:4444`is the prefix of the router and `5555:6666:7777:8888` is the IPv6 interface address of the rPi.
