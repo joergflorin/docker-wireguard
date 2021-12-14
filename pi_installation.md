@@ -153,3 +153,11 @@ The shown full address has the prefix of the router und the last four words shou
 https://bjango.com/help/istat3/linuxpackages/
 
 https://github.com/bjango/istatserverlinux
+
+### Enabling istatserver on system boot
+
+```
+sudo systemctl enable istatserver
+```
+
+Find istatserver code in `usr/local/etc/istatserver/istatserver.conf`
