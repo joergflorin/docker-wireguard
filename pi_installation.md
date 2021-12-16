@@ -31,48 +31,48 @@ sudo apt-get install exfat-utils
 
 ### Configure mount point
 
-1. Get UUID via command `blkid` -> my-complete-uuid
-
-Alternatively: List usb devices:
+#### Determine UUID
 
 ```
+sudo blkid
 sudo blkid -o list -w /dev/null
 ```
 
-3. Automount with autofs
+-> my-complete-uuid
+
+#### Create mount point
 
 ```
-sudo apt-get install autofs
-sudo mkdir /automnt
-sudo vi /etc/auto.master
+sudo mkdir /media/my-external-mount
 ```
 
-Add following line to `auto.master`:
+#### Configure UDEV
 
 ```
-/automnt /etc/auto.automnt --timeout=5 --ghost
+sudo apt-get install udev
+sudo vi /etc/udev/rules.d/80-usbdevice.rules
 ```
 
-Edit `/etc/auto.automnt`:
+Edit file `80-usbdevice.rules`:
 
 ```
-sudo vi /etc/auto.automnt
+RUN+="/bin/mount -t exfat -o uid=0,gid=46,umask=007 /dev/disk/by-uuid/my-complete-uuid /media/my-external-mount"
 ```
 
-Add following line to `/etc/auto.automnt`:
+Restart UDEV service:
 
 ```
-my-external-mount -fstype=exfat,sync,uid=0,gid=46,umask=007 :/dev/disk/by-uuid/my-complete-uuid
+sudo systemctl reload udev
 ```
 
-Restart service:
+Unmount flash drive with following command if neccessary:
 
 ```
-sudo systemctl reload autofs
+sudo umount /media/my-external-mount
 ```
 
 see: https://wiki.ubuntuusers.de/USB-Datenträger_automatisch_einbinden/
-see: https://wiki.archlinux.org/title/autofs
+
 
 to delete....
 ```
