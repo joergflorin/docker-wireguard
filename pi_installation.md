@@ -32,28 +32,50 @@ sudo apt-get install exfat-utils
 ### Configure mount point
 
 1. Get UUID via command `blkid` -> my-complete-uuid
-2. Create mount point
+
+Alternatively: List usb devices:
 
 ```
-sudo mkdir /media/my-external-mount
+sudo blkid -o list -w /dev/null
 ```
 
-3. Add to `/etc/fstab`
+3. Automount with autofs
 
+```
+sudo apt-get install autofs
+sudo mkdir /automnt
+sudo vi /etc/auto.master
+```
+
+Add following line to `auto.master`:
+
+```
+/automnt /etc/auto.automnt --timeout=5 --ghost
+```
+
+Edit `/etc/auto.automnt`:
+
+```
+sudo vi /etc/auto.automnt
+```
+
+Add following line to `/etc/auto.automnt`:
+
+```
+my-external-mount -fstype=exfat,sync,uid=0,gid=46,umask=007 :/dev/disk/by-uuid/my-complete-uuid
+```
+
+Restart service:
+
+```
+sudo systemctl reload autofs
+```
+
+see: https://wiki.ubuntuusers.de/USB-Datenträger_automatisch_einbinden/
+
+to delete....
 ```
 PARTUUID=my-complete-uuid /media/my-external-mount exfat defaults,auto,umask=000,users,rw 0 0
-```
-
-The flash drive can be mounted by following command
-
-```
-mount /mnt/my-external-mount
-```
-
-The flash drive can be unmounted by following command
-
-```
-umount /mnt/my-external-mount
 ```
 
 ## Install git
