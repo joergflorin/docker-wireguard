@@ -20,7 +20,7 @@ sudo apt-get autoclean
 ```
 7. Install `~/.ssh/authorized_keys` for easy ssh access.
 
-## Mount external flash drive (fuse, exfat) for munkirepo and optional full backups
+## Mount external flash drive (fuse, exfat) for optional full backups
 
 ### Install exfat driver
 
@@ -46,37 +46,10 @@ sudo blkid -o list -w /dev/null
 sudo mkdir /media/my-external-mount
 ```
 
-#### Configure UDEV
+#### Configure `/etc/fstab`
 
 ```
-sudo apt-get install udev
-sudo vi /etc/udev/rules.d/80-usbdevice.rules
-```
-
-Edit file `80-usbdevice.rules`:
-
-```
-RUN+="/bin/mount -t exfat -o uid=0,gid=46,umask=007 /dev/disk/by-uuid/my-complete-uuid /media/my-external-mount"
-```
-
-Restart UDEV service:
-
-```
-sudo systemctl reload udev
-```
-
-Unmount flash drive with following command if neccessary:
-
-```
-sudo umount /media/my-external-mount
-```
-
-see: https://wiki.ubuntuusers.de/USB-Datenträger_automatisch_einbinden/
-
-
-to delete....
-```
-PARTUUID=my-complete-uuid /media/my-external-mount exfat defaults,auto,umask=000,users,rw 0 0
+PARTUUID=my-complete-uuid /media/my-external-mount exfat defaults,noauto,umask=000,users,rw 0 0
 ```
 
 ## Install git
