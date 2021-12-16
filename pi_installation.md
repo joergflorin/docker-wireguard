@@ -72,6 +72,7 @@ sudo systemctl reload autofs
 ```
 
 see: https://wiki.ubuntuusers.de/USB-Datenträger_automatisch_einbinden/
+see: https://wiki.archlinux.org/title/autofs
 
 to delete....
 ```
