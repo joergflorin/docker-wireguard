@@ -163,4 +163,4 @@ https://github.com/bjango/istatserverlinux
 sudo systemctl enable istatserver
 ```
 
-Find istatserver code in `usr/local/etc/istatserver/istatserver.conf`
+Find istatserver code in `/usr/local/etc/istatserver/istatserver.conf`
