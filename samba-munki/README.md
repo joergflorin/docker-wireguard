@@ -5,7 +5,7 @@ Docker service definitions for Samba server.
 Create subdirectories `moneymoney` (only private access) and `munki_repo` (public read access) as samba shares. The subdirectories may be symlinks to mounted external drives:
 
 ```
-ln -s /media/mymountpoint/munki_repo munki_repo
+ln -s /media/my-external-mount/munki_repo munki_repo
 ```
 
 Set environment variables for setting the users for the directories:
