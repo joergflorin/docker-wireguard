@@ -20,12 +20,13 @@ sudo apt-get autoclean
 ```
 7. Install `~/.ssh/authorized_keys` for easy ssh access.
 
-## Mount external drive (fuse, ntfs) for full backups only (optional)
+## Mount external flash drive (fuse, exfat) for munkirepo and optional full backups
 
-### Install ntfs-3g driver
+### Install exfat driver
 
 ```
-sudo apt-get install ntfs-3g
+sudo apt-get install exfat-fuse
+sudo apt-get install exfat-utils
 ```
 
 ### Configure mount point
@@ -34,19 +35,25 @@ sudo apt-get install ntfs-3g
 2. Create mount point
 
 ```
-sudo mkdir /mnt/my-external-mount
+sudo mkdir /media/my-external-mount
 ```
 
 3. Add to `/etc/fstab`
 
 ```
-PARTUUID=my-complete-uuid /mnt/my-external-mount     ntfs    defaults,noauto,nls=utf-8        0       0
+PARTUUID=my-complete-uuid /media/my-external-mount exfat defaults,auto,umask=000,users,rw 0 0
 ```
 
-The drive can be mounted by following command
+The flash drive can be mounted by following command
 
 ```
-sudo mount /mnt/my-external-mount
+mount /mnt/my-external-mount
+```
+
+The flash drive can be unmounted by following command
+
+```
+umount /mnt/my-external-mount
 ```
 
 ## Install git
