@@ -4,7 +4,7 @@ services:
   http-munki:
     image: nginx
     container_name: http-munki
-    restart: unless-stopped
+    restart: always
     ports:
       - 80:80
 
