@@ -3,7 +3,7 @@ version: "3"
 services:
   scheduler:
     image: mcuadros/ofelia:latest
-    restart: unless-stopped
+    restart: always
     depends_on:
       - wget-casa-blu-fetch
     container_name: scheduler
