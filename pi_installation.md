@@ -120,8 +120,10 @@ sudo pip3 install docker-compose
 
 ## Configure and install containers
 ### Portainer CE
-https://docs.portainer.io/v/ce-2.9/
-https://docs.portainer.io/v/ce-2.9/start/install/server/docker/linux
+
+https://docs.portainer.io/v/ce-2.11/
+
+https://docs.portainer.io/v/ce-2.11/start/install/server/docker/linux
 
 http address of portainer: https://mypi:9443
 
