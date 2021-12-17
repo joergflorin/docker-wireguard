@@ -29,13 +29,19 @@ https://github.com/bjango/istatserverlinux
 
 ```
 curl -fsSL https://raw.githubusercontent.com/bjango/istatserverlinux/master/get-istatserver.sh -o istatserverlinux.sh && sh istatserverlinux.sh
-sudo cp ./resource/systemd/istatserver.service /etc/systemd/system/istatserver.service
+
 ```
 
 ### Enabling istatserver on system boot
 
+Download https://raw.githubusercontent.com/bjango/istatserverlinux/master/resource/systemd/istatserver.service
+
 ```
+curl -fsSL https://raw.githubusercontent.com/bjango/istatserverlinux/master/resource/systemd/istatserver.service -o istatserver.service
+sudo cp istatserver.service /etc/systemd/system/istatserver.service
+sudo chmod 755 /etc/systemd/system/istatserver.service
 sudo systemctl enable istatserver
+sudo reboot
 ```
 
 Find or change istatserver code in `/usr/local/etc/istatserver/istatserver.conf`
