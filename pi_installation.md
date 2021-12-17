@@ -94,7 +94,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-### Add user pi to group docker
+### Add current user (pi) to group docker
 
 ```
 sudo usermod -aG docker ${USER}
