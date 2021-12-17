@@ -11,8 +11,9 @@ see https://www.raspberrypi.org/documentation/computers/getting-started.html
    - set hostname (e.g. mypi)
    - configure ssh access
 5. Boot pi with prepared SD card and connect via ssh
-6. Install `~/.ssh/authorized_keys` for easy ssh access.
-7. update os:
+6. Configure pi `sudo raspi-config` esp. time zone
+7. Install `~/.ssh/authorized_keys` for easy ssh access.
+8. update os:
 
 ```
 sudo apt-get update
