@@ -27,6 +27,11 @@ https://bjango.com/help/istat3/linuxpackages/
 
 https://github.com/bjango/istatserverlinux
 
+```
+curl -fsSL https://raw.githubusercontent.com/bjango/istatserverlinux/master/get-istatserver.sh -o istatserverlinux.sh && sh istatserverlinux.sh
+sudo cp ./resource/systemd/istatserver.service /etc/systemd/system/istatserver.service
+```
+
 ### Enabling istatserver on system boot
 
 ```
