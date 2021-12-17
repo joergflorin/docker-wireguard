@@ -18,8 +18,10 @@ see https://www.raspberrypi.org/documentation/computers/getting-started.html
 sudo apt-get update
 sudo apt-get dist-upgrade
 sudo apt-get autoclean
+sudo reboot
 ```
-## istartserver
+
+## istatserver
 
 https://bjango.com/help/istat3/linuxpackages/
 
