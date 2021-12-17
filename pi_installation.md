@@ -118,6 +118,18 @@ sudo apt-get install -y python3 python3-pip
 sudo pip3 install docker-compose
 ```
 
+Problems regarding installing docker-compose:
+
+https://github.com/docker/compose/issues/8105
+
+This works for me:
+
+```
+echo "cryptography==3.3.2" > /tmp/requirements.txt
+sudo pip3 install -U docker-compose -r /tmp/requirements.txt
+rm /tmp/requirements.txt
+```
+
 ## Configure and install containers
 ### Portainer CE
 
