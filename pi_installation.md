@@ -29,7 +29,6 @@ https://github.com/bjango/istatserverlinux
 
 ```
 curl -fsSL https://raw.githubusercontent.com/bjango/istatserverlinux/master/get-istatserver.sh -o istatserverlinux.sh && sh istatserverlinux.sh
-
 ```
 
 ### Enabling istatserver on system boot
