@@ -33,7 +33,7 @@ https://github.com/bjango/istatserverlinux
 sudo systemctl enable istatserver
 ```
 
-Find istatserver code in `/usr/local/etc/istatserver/istatserver.conf`
+Find or change istatserver code in `/usr/local/etc/istatserver/istatserver.conf`
 
 ## Mount external flash drive (fuse, exfat) for optional full backups
 
