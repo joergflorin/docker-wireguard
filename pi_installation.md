@@ -11,14 +11,27 @@ see https://www.raspberrypi.org/documentation/computers/getting-started.html
    - set hostname (e.g. mypi)
    - configure ssh access
 5. Boot pi with prepared SD card and connect via ssh
-6. update os:
+6. Install `~/.ssh/authorized_keys` for easy ssh access.
+7. update os:
 
 ```
 sudo apt-get update
 sudo apt-get dist-upgrade
 sudo apt-get autoclean
 ```
-7. Install `~/.ssh/authorized_keys` for easy ssh access.
+## istartserver
+
+https://bjango.com/help/istat3/linuxpackages/
+
+https://github.com/bjango/istatserverlinux
+
+### Enabling istatserver on system boot
+
+```
+sudo systemctl enable istatserver
+```
+
+Find istatserver code in `/usr/local/etc/istatserver/istatserver.conf`
 
 ## Mount external flash drive (fuse, exfat) for optional full backups
 
@@ -150,17 +163,3 @@ The shown full address has the prefix of the router und the last four words shou
 ```
 
 `1111:2222:3333:4444` is the prefix of the router and `5555:6666:7777:8888` is the IPv6 interface address of the rPi.
-
-## istartserver
-
-https://bjango.com/help/istat3/linuxpackages/
-
-https://github.com/bjango/istatserverlinux
-
-### Enabling istatserver on system boot
-
-```
-sudo systemctl enable istatserver
-```
-
-Find istatserver code in `/usr/local/etc/istatserver/istatserver.conf`
