@@ -23,7 +23,7 @@ SMBPASS_MM=MMPassword
 Finally run following command in this directory: 
 
 ```
-install.sh
+./install.sh
 ```
 
 see https://hub.docker.com/r/trnape/rpi-samba/
