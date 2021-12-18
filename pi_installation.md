@@ -46,7 +46,7 @@ sudo reboot
 
 Find or change istatserver code in `/usr/local/etc/istatserver/istatserver.conf`
 
-## Mount external flash drive (fuse, exfat) for optional full backups
+## Mount external flash drive (fuse, exfat) for data transfer
 
 ### Install exfat driver
 
@@ -160,6 +160,9 @@ via docker-yaml, see https://github.com/joergflorin/docker/tree/master/homebridg
 
 ### cron trigger for external websites
 via docker-yaml, see https://github.com/joergflorin/docker/tree/master/scheduler
+
+### backup with rsnapshot to local directory
+via docker-yaml, see https://github.com/joergflorin/docker/tree/master/backup
 
 ## ddclient (for external ipv6 access)
 ```
