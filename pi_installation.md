@@ -191,7 +191,7 @@ The shown full address has the prefix of the router und the last four words shou
 
 `1111:2222:3333:4444` is the prefix of the router and `5555:6666:7777:8888` is the IPv6 interface address of the rPi.
 
-### Use USB stick with ext4 fs for backup
+### Use USB drive with ext4 fs for backup
 
 Determine device:
 
