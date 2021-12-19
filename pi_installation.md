@@ -212,5 +212,5 @@ sudo mkfs.ext4 /dev/sda1
 Add to `/etc/fstab`:
 
 ```
-PARTUUID=my-part-uuid /media/my-mount-point ext4 defaults,noauto,noatime 0 0
+PARTUUID=my-part-uuid /media/my-mount-point ext4 defaults,auto,nofail,noatime 0 0
 ```
