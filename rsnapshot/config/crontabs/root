@@ -8,6 +8,6 @@
 
 # rsnapshot examples
 0       */4     *       *       *       rsnapshot alpha
-30      6       *       *       *       rsnapshot beta
-0       0       *       *       1       rsnapshot gamma
-0       1       1       *       *       rsnapshot delta
+0       2       *       *       *       rsnapshot beta
+0       3       *       *       1       rsnapshot gamma
+0       4       1       *       *       rsnapshot delta
