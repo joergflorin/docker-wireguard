@@ -21,6 +21,11 @@ sudo apt-get dist-upgrade
 sudo apt-get autoclean
 sudo reboot
 ```
+9. additional tools:
+
+```
+sudo apt-get pv
+```
 
 ## istatserver
 
