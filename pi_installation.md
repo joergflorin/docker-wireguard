@@ -164,6 +164,9 @@ via docker-yaml, see https://github.com/joergflorin/docker/tree/master/scheduler
 ### backup with rsnapshot to local directory
 via docker-yaml, see https://github.com/joergflorin/docker/tree/master/backup
 
+### periodically speedtest
+via docker-yaml, see https://github.com/joergflorin/docker/tree/master/speedtest
+
 ## ddclient (for external ipv6 access)
 ```
 sudo apt-get install ddclient
