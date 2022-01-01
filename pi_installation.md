@@ -172,6 +172,9 @@ via docker-yaml, see https://github.com/joergflorin/docker/tree/master/backup
 ### periodically speedtest
 via docker-yaml, see https://github.com/joergflorin/docker/tree/master/speedtest
 
+### pi-hole dns
+via docker-yaml, see https://github.com/joergflorin/docker/tree/master/pi-hole
+
 ## ddclient (for external ipv6 access)
 ```
 sudo apt-get install ddclient
