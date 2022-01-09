@@ -175,6 +175,9 @@ via docker-yaml, see https://github.com/joergflorin/docker/tree/master/speedtest
 ### pi-hole dns
 via docker-yaml, see https://github.com/joergflorin/docker/tree/master/pi-hole
 
+### wireguard
+via docker-yaml, see https://github.com/joergflorin/docker/tree/master/wireguard
+
 ## ddclient (for external ipv6 access)
 ```
 sudo apt-get install ddclient
