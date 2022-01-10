@@ -12,7 +12,7 @@ services:
       - "8766:80/tcp"
     environment:
       TZ: 'Europe/Berlin'
-    # WEBPASSWORD: 'defined-in-env-txt'
+      WEBPASSWORD: '${WEBPASSWORD}'
     # Volumes store your data between container upgrades
     volumes:
       - './etc-pihole:/etc/pihole'
@@ -21,4 +21,4 @@ services:
     #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     cap_add:
       - NET_ADMIN
-    restart: always
+    restart: unless-stopped

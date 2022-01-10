@@ -4,7 +4,7 @@ services:
   samba-munki:
     image: trnape/rpi-samba
     container_name: samba-munki
-    restart: always
+    restart: unless-stopped
     ports:
       - 445:445
  
