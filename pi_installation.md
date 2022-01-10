@@ -27,6 +27,23 @@ sudo reboot
 sudo apt-get pv
 ```
 
+## Disable dhcp privacy extensions
+
+```
+sudo vi /etc/dhcpcd.conf
+```
+
+change to:
+
+```
+...
+# Generate SLAAC address using the Hardware Address of the interface
+slaac hwaddr
+# OR generate Stable Private IPv6 Addresses based from the DUID
+#slaac private
+...
+```
+
 ## istatserver
 
 https://bjango.com/help/istat3/linuxpackages/
