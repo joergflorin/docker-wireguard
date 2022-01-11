@@ -195,6 +195,9 @@ via docker-yaml, see https://github.com/joergflorin/docker/tree/master/pi-hole
 ### wireguard
 via docker-yaml, see https://github.com/joergflorin/docker/tree/master/wireguard
 
+### grafana
+https://grafana.com/grafana/dashboards/15120
+
 ## ddclient (for external ipv6 access)
 ```
 sudo apt-get install ddclient
