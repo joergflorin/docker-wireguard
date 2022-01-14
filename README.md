@@ -1,15 +1,13 @@
-# docker
+# wireguard
 
-Docker service definitions for docker-compose.
+Docker service definitions for wireguard vpn.
 
-To update a docker container change to the desired sub directory and run following command:
+Edit your `SERVERURL` in `env.txt`
 
-```
-docker-compose up -d
-```
-
-Some compose definition folders contains an install script to use an `env.txt` file with environment definitions:
+Run following command in this directory: 
 
 ```
 ./install.sh
 ```
+
+see https://hub.docker.com/r/linuxserver/wireguard
