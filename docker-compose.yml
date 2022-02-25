@@ -13,7 +13,7 @@ services:
       TZ: Europe/Berlin
       SERVERPORT: 51820
       SERVERURL: '${SERVERURL}'
-      PEERS: 1
+      PEERS: 2
       PEERDNS: auto
       INTERNAL_SUBNET: 10.13.13.0
       ALLOWEDIPS: 0.0.0.0/0
