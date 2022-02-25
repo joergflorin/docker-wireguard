@@ -1,4 +1,4 @@
-# wireguard
+# docker-wireguard
 
 Docker service definitions for wireguard vpn.
 
